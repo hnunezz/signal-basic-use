@@ -1,0 +1,9 @@
+<ul>
+  @for (user of users(); track user) {
+  <li>
+    {{user}} <button (click)="handleRemove(user)">Delete</button>
+  </li>
+  } @empty {
+    <small>Sem dados!</small>
+  }
+</ul>

@@ -1,2 +1,6 @@
-<app-search-input [(search)]="search"/>
-<app-list [users]="filteredUsers()" (remove)="remove($event)"/>
+@defer(when !loading()) {
+<app-search-input [(search)]="search" />
+<app-list [users]="filteredUsers()" (remove)="remove($event)" />
+} @placeholder {
+<small>Carregando...</small>
+}
